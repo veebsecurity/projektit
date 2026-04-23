@@ -73,12 +73,10 @@ function TopicPage() {
         </nav>
 
         <header className="border-b border-border/60 pb-10">
-          <div className="flex items-center gap-3">
-            <span className="mono text-[11px] uppercase tracking-[0.22em] text-primary">
-              {category?.title ?? topic.category}
-            </span>
-          </div>
-          <h1 className="mt-5 font-display text-4xl font-semibold leading-tight tracking-tight md:text-5xl">
+          <span className="text-sm font-medium text-primary">
+            {category?.title ?? topic.category}
+          </span>
+          <h1 className="mt-3 font-display text-4xl font-semibold leading-tight tracking-tight md:text-5xl">
             {topic.title}
           </h1>
           <p className="mt-5 text-lg leading-relaxed text-muted-foreground">{topic.intro}</p>

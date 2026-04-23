@@ -63,7 +63,7 @@ function ToolsPage() {
                 </div>
 
                 <div className="mt-8 grid gap-px overflow-hidden rounded-xl border border-border bg-border md:grid-cols-2">
-                  {catTools.map((tool, i) => (
+                  {catTools.map((tool) => (
                     <a
                       key={tool.url}
                       href={tool.url}
@@ -72,28 +72,23 @@ function ToolsPage() {
                       className="group bg-card p-7 transition-colors hover:bg-surface-elevated"
                     >
                       <div className="flex items-center justify-between">
-                        <span className="mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
-                          {String(i + 1).padStart(2, "0")}
-                        </span>
-                        <div className="flex items-center gap-2">
-                          {tool.free && (
-                            <span className="rounded-sm border border-primary/40 bg-primary/10 px-1.5 py-0.5 mono text-[10px] uppercase tracking-[0.16em] text-primary">
-                              Tasuta
-                            </span>
-                          )}
-                          <span className="mono text-[11px] text-primary/70 transition-colors group-hover:text-primary">
-                            Ava ↗
+                        <h3 className="font-display text-xl font-semibold tracking-tight transition-colors group-hover:text-primary">
+                          {tool.name}
+                        </h3>
+                        {tool.free && (
+                          <span className="rounded-sm border border-primary/40 bg-primary/10 px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wide text-primary">
+                            Tasuta
                           </span>
-                        </div>
+                        )}
                       </div>
-                      <h3 className="mt-4 font-display text-xl font-semibold tracking-tight transition-colors group-hover:text-primary">
-                        {tool.name}
-                      </h3>
-                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                         {tool.description}
                       </p>
-                      <div className="mt-4 mono text-[11px] text-muted-foreground/70">
-                        {new URL(tool.url).hostname.replace(/^www\./, "")}
+                      <div className="mt-4 flex items-center justify-between text-xs text-muted-foreground/70">
+                        <span>{new URL(tool.url).hostname.replace(/^www\./, "")}</span>
+                        <span className="text-primary/80 transition-colors group-hover:text-primary">
+                          Ava ↗
+                        </span>
                       </div>
                     </a>
                   ))}

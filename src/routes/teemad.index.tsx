@@ -24,10 +24,7 @@ function TeemadIndex() {
       <SiteHeader />
       <section className="border-b border-border/60">
         <div className="mx-auto max-w-6xl px-6 py-20">
-          <span className="mono text-[11px] uppercase tracking-[0.22em] text-primary">
-            Indeks
-          </span>
-          <h1 className="mt-3 font-display text-4xl font-semibold tracking-tight md:text-6xl">
+          <h1 className="font-display text-4xl font-semibold tracking-tight md:text-6xl">
             Kõik teemad
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
@@ -45,10 +42,7 @@ function TeemadIndex() {
               <section key={cat.slug}>
                 <div className="flex items-end justify-between gap-6 border-b border-border/60 pb-5">
                   <div>
-                    <span className="mono text-[11px] uppercase tracking-[0.22em] text-primary">
-                      {String(ci + 1).padStart(2, "0")}
-                    </span>
-                    <h2 className="mt-1 font-display text-2xl font-semibold tracking-tight md:text-3xl">
+                    <h2 className="font-display text-2xl font-semibold tracking-tight md:text-3xl">
                       {cat.title}
                     </h2>
                     <p className="mt-2 max-w-2xl text-sm text-muted-foreground">

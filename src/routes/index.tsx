@@ -79,7 +79,7 @@ function Index() {
 
           <div className="mt-12 grid gap-px overflow-hidden rounded-xl border border-border bg-border md:grid-cols-3">
             <ReasonCard
-              title={"Sa oled sihtmärk, isegi kui sa pole keegi „tähtis”"}
+              title='Sa oled sihtmärk, isegi kui sa pole keegi „tähtis”'
               body="Suur osa rünnakutest on automaatsed. Robotid proovivad miljoneid kontosid päevas — kui sa kasutad sama parooli mitmes kohas, oled juba ohus. See pole isiklik, see on lihtsalt mass."
             />
             <ReasonCard

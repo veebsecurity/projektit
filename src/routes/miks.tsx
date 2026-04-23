@@ -35,7 +35,7 @@ function WhyPage() {
       </section>
 
       <article className="mx-auto max-w-3xl px-6 py-16 space-y-14">
-        <Section title={"1. Sa oled sihtmärk, ka kui sa pole keegi „tähtis”"}>
+        <Section title='1. Sa oled sihtmärk, ka kui sa pole keegi „tähtis”'>
           <p>
             Filmides häkkerid valivad ohvri ja tegelevad temaga päevi. Päriselus
             töötab see vastupidi. Suurem osa rünnakuid on automaatsed: skriptid,

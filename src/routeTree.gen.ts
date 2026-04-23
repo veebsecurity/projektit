@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TooriistadRouteImport } from './routes/tooriistad'
 import { Route as TeaveRouteImport } from './routes/teave'
+import { Route as MiksRouteImport } from './routes/miks'
 import { Route as KkkRouteImport } from './routes/kkk'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as TeemadIndexRouteImport } from './routes/teemad.index'
@@ -25,6 +26,11 @@ const TooriistadRoute = TooriistadRouteImport.update({
 const TeaveRoute = TeaveRouteImport.update({
   id: '/teave',
   path: '/teave',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MiksRoute = MiksRouteImport.update({
+  id: '/miks',
+  path: '/miks',
   getParentRoute: () => rootRouteImport,
 } as any)
 const KkkRoute = KkkRouteImport.update({
@@ -56,6 +62,7 @@ const KategooriadSlugRoute = KategooriadSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/kkk': typeof KkkRoute
+  '/miks': typeof MiksRoute
   '/teave': typeof TeaveRoute
   '/tooriistad': typeof TooriistadRoute
   '/kategooriad/$slug': typeof KategooriadSlugRoute
@@ -65,6 +72,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/kkk': typeof KkkRoute
+  '/miks': typeof MiksRoute
   '/teave': typeof TeaveRoute
   '/tooriistad': typeof TooriistadRoute
   '/kategooriad/$slug': typeof KategooriadSlugRoute
@@ -75,6 +83,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/kkk': typeof KkkRoute
+  '/miks': typeof MiksRoute
   '/teave': typeof TeaveRoute
   '/tooriistad': typeof TooriistadRoute
   '/kategooriad/$slug': typeof KategooriadSlugRoute
@@ -86,6 +95,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/kkk'
+    | '/miks'
     | '/teave'
     | '/tooriistad'
     | '/kategooriad/$slug'
@@ -95,6 +105,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/kkk'
+    | '/miks'
     | '/teave'
     | '/tooriistad'
     | '/kategooriad/$slug'
@@ -104,6 +115,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/kkk'
+    | '/miks'
     | '/teave'
     | '/tooriistad'
     | '/kategooriad/$slug'
@@ -114,6 +126,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   KkkRoute: typeof KkkRoute
+  MiksRoute: typeof MiksRoute
   TeaveRoute: typeof TeaveRoute
   TooriistadRoute: typeof TooriistadRoute
   KategooriadSlugRoute: typeof KategooriadSlugRoute
@@ -135,6 +148,13 @@ declare module '@tanstack/react-router' {
       path: '/teave'
       fullPath: '/teave'
       preLoaderRoute: typeof TeaveRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/miks': {
+      id: '/miks'
+      path: '/miks'
+      fullPath: '/miks'
+      preLoaderRoute: typeof MiksRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/kkk': {
@@ -178,6 +198,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   KkkRoute: KkkRoute,
+  MiksRoute: MiksRoute,
   TeaveRoute: TeaveRoute,
   TooriistadRoute: TooriistadRoute,
   KategooriadSlugRoute: KategooriadSlugRoute,

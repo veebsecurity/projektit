@@ -87,14 +87,9 @@ function TopicPage() {
         <div className="mt-12 space-y-12">
           {topic.sections.map((section, i) => (
             <section key={i} className="float-up" style={{ animationDelay: `${i * 60}ms` }}>
-              <div className="flex items-baseline gap-3">
-                <span className="mono text-[11px] uppercase tracking-[0.22em] text-primary/70">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <h2 className="font-display text-2xl font-semibold tracking-tight">
-                  {section.title}
-                </h2>
-              </div>
+              <h2 className="font-display text-2xl font-semibold tracking-tight">
+                {section.title}
+              </h2>
               <p className="mt-4 text-[15px] leading-[1.75] text-foreground/85">
                 {section.content}
               </p>
@@ -102,7 +97,6 @@ function TopicPage() {
                 <ul className="mt-5 space-y-2.5 border-l-2 border-primary/40 pl-5">
                   {section.list.map((item, j) => (
                     <li key={j} className="text-[15px] leading-relaxed text-foreground/85">
-                      <span className="mono mr-3 text-xs text-primary">›</span>
                       {item}
                     </li>
                   ))}
@@ -114,11 +108,8 @@ function TopicPage() {
 
         {related.length > 0 && (
           <aside className="mt-20 border-t border-border/60 pt-10">
-            <span className="mono text-[11px] uppercase tracking-[0.22em] text-primary">
-              Edasi lugemiseks
-            </span>
-            <h3 className="mt-2 font-display text-2xl font-semibold tracking-tight">
-              Sama kategooria teemad
+            <h3 className="font-display text-2xl font-semibold tracking-tight">
+              Sama teemaga seotud
             </h3>
             <div className="mt-6 grid gap-4 md:grid-cols-3">
               {related.map((r) => (

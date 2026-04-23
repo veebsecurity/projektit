@@ -45,12 +45,12 @@ function KKKPage() {
                 </h3>
                 <span
                   aria-hidden
-                  className="mono mt-1 text-lg text-primary transition-transform group-open:rotate-45"
+                  className="mt-1 text-lg text-primary transition-transform group-open:rotate-45"
                 >
                   +
                 </span>
               </summary>
-              <p className="mt-4 pl-12 text-[15px] leading-[1.75] text-muted-foreground">
+              <p className="mt-4 text-[15px] leading-[1.75] text-muted-foreground">
                 {f.answer}
               </p>
             </details>

@@ -12,8 +12,8 @@ export function SiteFooter() {
             <span className="font-display text-base font-semibold">VeebSecurity</span>
           </div>
           <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
-            Lihtne juhend digiturvalisusest. Tehtud projektitööna —
-            kõik soovitused on informatiivsed.
+            Projektitöö, mille tegime endale õppimiseks. Sisu on
+            informatiivne ja kokku pandud avalikest allikatest.
           </p>
         </div>
 
@@ -57,7 +57,7 @@ export function SiteFooter() {
                 rel="noreferrer"
                 className="text-foreground/80 transition-colors hover:text-primary"
               >
-                RIA — Eesti
+                RIA
               </a>
             </li>
             <li>
@@ -77,7 +77,7 @@ export function SiteFooter() {
                 rel="noreferrer"
                 className="text-foreground/80 transition-colors hover:text-primary"
               >
-                CISA — USA
+                CISA
               </a>
             </li>
           </ul>

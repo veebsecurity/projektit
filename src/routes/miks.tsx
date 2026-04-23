@@ -10,7 +10,7 @@ export const Route = createFileRoute("/miks")({
       {
         name: "description",
         content:
-          "Miks iga tavaline inimene peaks netis end kaitsma — ohud, eetika ja privaatsuse põhjused lihtsas keeles.",
+          "Miks iga tavaline inimene peaks netis end kaitsma. Ohud, eetika ja privaatsuse põhjused lihtsas keeles.",
       },
     ],
   }),
@@ -28,8 +28,8 @@ function WhyPage() {
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-foreground/80">
             Enamik inimesi mõtleb küberturvalisusest siis, kui midagi on juba
-            juhtunud. Siin on kokkuvõte sellest, miks tasub mõelda varem — ja
-            miks see ei puuduta ainult „tähtsaid” inimesi.
+            juhtunud. Siia panime kokku, miks tasub mõelda varem ja miks see
+            ei puuduta ainult „tähtsaid” inimesi.
           </p>
         </div>
       </section>
@@ -43,13 +43,13 @@ function WhyPage() {
             sama phishing-kirja sajandadele inimestele korraga.
           </p>
           <p>
-            See tähendab, et sind ei „valita”. Sa langed lihtsalt sõela, kui sa
-            pole minimaalseid ettevaatusabinõusid võtnud. Tugev ja unikaalne
-            parool + 2FA viib sind kohe enamiku ohvrite hulgast välja.
+            See tähendab, et sind ei „valita”. Sa langed lihtsalt sõela, kui
+            pole minimaalseid ettevaatusabinõusid võtnud. Tugev unikaalne
+            parool ja 2FA viib enamiku ohvrite hulgast välja.
           </p>
         </Section>
 
-        <Section title="2. Sinu konto on raha väärt — isegi kui sa nii ei mõtle">
+        <Section title="2. Sinu konto on raha väärt, ka kui sa nii ei mõtle">
           <p>
             Pangakonto puhul on see selge. Aga ka muud kontod on turul väärt:
           </p>
@@ -59,7 +59,7 @@ function WhyPage() {
               („unustasid parooli?” e-kiri tuleb sinna).
             </li>
             <li>
-              Sotsiaalmeedia kontot kasutatakse pettusteks sinu sõprade vastu —
+              Sotsiaalmeedia kontot kasutatakse pettusteks sõprade vastu:
               „hei, saadan sulle lingi, vaata kiiresti”.
             </li>
             <li>
@@ -83,8 +83,8 @@ function WhyPage() {
             Sa lukustad vannitoa ukse, paned kardinad ette, ei räägi oma
             arstivisiitidest võõrastele. Mitte sellepärast, et midagi
             kahtlast oleks, vaid sellepärast, et see, mis on isiklik, on
-            isiklik. Privaatsus on vaikimisi seisund — see, et anname seda
-            hoolimatusest ära, ei muuda asja loomulikuks.
+              isiklik. Privaatsus on vaikimisi seisund. See, et anname seda
+              hoolimatusest ära, ei muuda asja loomulikuks.
           </p>
           <p>
             Andmed, mida tasuta teenused sinust koguvad, kasutatakse hindade
@@ -102,18 +102,18 @@ function WhyPage() {
             saata pahatahtlikke linke su kontaktidele.
           </p>
           <p>
-            Selles mõttes on digihügieen sarnane päris hügieenile — see ei ole
+            Selles mõttes on digihügieen sarnane päris hügieenile: see ei ole
             ainult sinu jaoks, vaid kõigi jaoks su ümber.
           </p>
         </Section>
 
-        <Section title="5. Eetiline pool — õigus mitte olla jälgitud">
+        <Section title="5. Eetiline pool: õigus mitte olla jälgitud">
           <p>
-            On vahe selle vahel, kas sa annad kellelegi millegi vabatahtlikult
-            ja kas see võetakse sult vaikselt. Enamik tasuta teenuseid
-            töötab teise mudeli järgi — sa ei loe 40-leheküljelist
-            kasutustingimust ja sellepärast „nõustud” sellega, et su asukoht,
-            kontaktid ja kõnetajad lähevad andmebaasidesse.
+            On vahe selle vahel, kas sa annad kellelegi midagi vabatahtlikult
+            ja kas see võetakse sult vaikselt. Enamik tasuta teenuseid töötab
+            teise mudeli järgi. Sa ei loe 40-leheküljelist kasutustingimust ja
+            sellepärast „nõustud” sellega, et su asukoht, kontaktid ja
+            harjumused lähevad andmebaasidesse.
           </p>
           <p>
             Kaitsta ennast ei tähenda paranoiat. See tähendab teadlikku
@@ -130,7 +130,7 @@ function WhyPage() {
           </p>
           <ul className="mt-3 space-y-2 border-l-2 border-primary/40 pl-5">
             <li>Iga konto jaoks unikaalne parool (paroolihaldur teeb selle lihtsaks).</li>
-            <li>2FA tähtsates kontodes — eriti e-postil ja pangal.</li>
+            <li>2FA tähtsates kontodes, eriti e-postil ja pangal.</li>
             <li>Tarkvara uuendused, kui need tulevad.</li>
             <li>Mõtle korraks enne, kui klõpsad kahtlasel lingil.</li>
             <li>Varukoopia tähtsatest failidest.</li>
@@ -143,7 +143,7 @@ function WhyPage() {
 
         <div className="surface-card mt-12 flex flex-col gap-4 p-6 md:flex-row md:items-center md:justify-between">
           <p className="text-sm text-muted-foreground">
-            Valmis vaatama, kuidas neid asju praktikas teha?
+            Vaata, kuidas neid asju praktikas teha.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link

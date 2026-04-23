@@ -29,18 +29,13 @@ function Index() {
       <section className="border-b border-border/60">
         <div className="mx-auto max-w-5xl px-6 pt-20 pb-20 md:pt-28 md:pb-24">
           <h1 className="max-w-4xl font-display text-4xl leading-[1.1] tracking-tight md:text-6xl">
-            Iga inimene jätab netis jälgi.
-            <br className="hidden md:block" />{" "}
-            <span className="text-muted-foreground">
-              Selle saidi mõte on aidata sul aru saada, milliseid ja miks see
-              oluline on.
-            </span>
+            Küberturvalisus tavainimese pilgu läbi.
           </h1>
 
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-foreground/80">
-            See ei ole hirmutamine. Suur osa rünnakutest ei vali ohvreid käsitsi —
-            need on automaatsed ja proovivad lihtsalt kõike, mis liigub. Hea
-            uudis: paar lihtsat harjumust katavad enamiku riske ära.
+            See on meie projektitöö. Tegime selle eelkõige iseendale, et
+            koolis õpitu kuhugi maha kirjutada ja korralikult selgeks saada.
+            Kui keegi teine ka sellest midagi kasulikku leiab, on see boonus.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-3">
@@ -69,22 +64,22 @@ function Index() {
               {"„Mul pole midagi varjata” on müüt"}
             </h2>
             <p className="mt-5 text-base leading-relaxed text-foreground/80">
-              See lause kõlab loogiliselt, aga vaatame seda lähemalt. Sa lukustad
-              kodus vannitoa ukse, paned kardinad ette ja ei pane oma SMS-e
+              See lause kõlab loogiliselt, aga ei pea vett. Sa lukustad kodus
+              vannitoa ukse, paned kardinad ette ja ei pane oma SMS-e
               tänavakuulutusele. Mitte sellepärast, et midagi varjata, vaid
-              sellepärast, et privaatsus on inimeseks olemise osa. Veebis kehtib
-              täpselt sama loogika.
+              sellepärast, et privaatsus on inimeseks olemise osa. Veebis
+              kehtib täpselt sama loogika.
             </p>
           </div>
 
           <div className="mt-12 grid gap-px overflow-hidden rounded-xl border border-border bg-border md:grid-cols-3">
             <ReasonCard
               title='Sa oled sihtmärk, isegi kui sa pole keegi „tähtis”'
-              body="Suur osa rünnakutest on automaatsed. Robotid proovivad miljoneid kontosid päevas — kui sa kasutad sama parooli mitmes kohas, oled juba ohus. See pole isiklik, see on lihtsalt mass."
+              body="Suur osa rünnakutest on automaatsed. Robotid proovivad miljoneid kontosid päevas. Kui kasutad sama parooli mitmes kohas, oled juba ohus. See pole isiklik, see on lihtsalt mass."
             />
             <ReasonCard
-              title="Sinu konto on väärtuslik"
-              body="Pangakonto on selge, aga ka su Instagram, e-post või Steami konto on raha väärt. Varastatud kontosid müüakse, kasutatakse pettusteks su sõprade vastu või tühjendatakse virtuaalsetest esemetest."
+              title="Konto on väärtuslik"
+              body="Pangakonto on selge, aga ka Instagram, e-post või Steami konto on raha väärt. Varastatud kontosid müüakse, kasutatakse pettusteks sõprade vastu või tühjendatakse virtuaalsetest esemetest."
             />
             <ReasonCard
               title="Sinu andmed mõjutavad ka teisi"
@@ -112,7 +107,7 @@ function Index() {
               Vali teema
             </h2>
             <p className="mt-2 max-w-xl text-sm text-muted-foreground">
-              Kõik on jaotatud lühikesteks osadeks — võta üks korraga.
+              Kõik on jaotatud lühikesteks osadeks, võta üks korraga.
             </p>
           </div>
           <Link

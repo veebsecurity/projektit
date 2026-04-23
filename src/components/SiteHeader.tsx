@@ -13,7 +13,7 @@ export function SiteHeader() {
               VeebSecurity
             </span>
             <span className="text-[11px] text-muted-foreground">
-              Eestikeelne digiturvalisuse juhend
+              Projektitöö
             </span>
           </div>
         </Link>

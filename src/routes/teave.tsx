@@ -26,9 +26,11 @@ function AboutPage() {
             Mida ja miks
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-            See sait on koolitööna tehtud lihtne juhend digiturvalisuseks. Mõte
-            on anda tavalisele inimesele põhiteadmised — mis ohud üldse on,
-            kuidas neid ära tunda ja milliste tööriistadega end kaitsta.
+            See sait on meie koolitööna tehtud projekt. Põhimõtteliselt on
+            see meie endi konspekt, kuhu panime kokku, mida õppisime
+            küberturvalisusest. Avalikult väljas sellepärast, et nii on
+            seda endal mugavam lugeda ja kui keegi muu midagi siit kasu
+            saab, on see ainult hea.
           </p>
         </div>
       </section>
@@ -37,10 +39,10 @@ function AboutPage() {
         <div className="space-y-10">
           <Block title="Põhimõtted">
             <p>
-              Sisu on kokku pandud avalike ja usaldusväärsete allikate põhjal —
-              RIA, CISA, OWASP. Soovitused on praktilised, mitte teoreetilised.
-              Kui mõni nõuanne siin puudub, siis enamasti seetõttu, et see
-              tavakasutaja jaoks oluline pole.
+              Sisu on kokku pandud avalike allikate põhjal: RIA, CISA, OWASP.
+              Soovitused on praktilised, mitte teoreetilised. Eesmärk pole
+              olla täielik küberturvalisuse õpik, vaid katta need asjad, mis
+              tavakasutaja jaoks päriselt korda lähevad.
             </p>
           </Block>
 
@@ -54,8 +56,7 @@ function AboutPage() {
                   className="text-foreground transition-colors hover:text-primary"
                 >
                   Riigi Infosüsteemi Amet (RIA)
-                </a>{" "}
-                — Eesti küberturvalisuse meeskond
+                </a>
               </li>
               <li>
                 <a
@@ -65,8 +66,7 @@ function AboutPage() {
                   className="text-foreground transition-colors hover:text-primary"
                 >
                   CISA
-                </a>{" "}
-                — USA küberturvalisuse agentuur
+                </a>
               </li>
               <li>
                 <a
@@ -76,8 +76,7 @@ function AboutPage() {
                   className="text-foreground transition-colors hover:text-primary"
                 >
                   OWASP
-                </a>{" "}
-                — Veebirakenduste turvalisuse ressurss
+                </a>
               </li>
             </ul>
           </Block>
@@ -93,7 +92,7 @@ function AboutPage() {
 
         <div className="mt-16 surface-card flex items-center justify-between gap-6 p-6">
           <p className="text-sm text-muted-foreground">
-            Valmis alustama? Vaata kõiki teemasid ühes kohas.
+            Vaata kõiki teemasid ühes kohas.
           </p>
           <Link
             to="/teemad"

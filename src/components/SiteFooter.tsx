@@ -88,8 +88,6 @@ export function SiteFooter() {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
           <p className="mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
             © {new Date().getFullYear()} VeebSecurity
-          </p>
-          <p className="mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
             Projektitöö
           </p>
         </div>

@@ -12,11 +12,8 @@ export function SiteFooter() {
             <span className="font-display text-base font-semibold">VeebSecurity</span>
           </div>
           <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
-            Praktiline juhend digitaalseks turvalisuseks igaühele. Eesti keeles, ilma
-            tarbetu žargoonita.
-          </p>
-          <p className="mono mt-6 text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
-            Sisu on informatiivne, mitte juriidiline nõuanne.
+            Lihtne juhend digiturvalisusest. Tehtud projektitööna —
+            kõik soovitused on informatiivsed.
           </p>
         </div>
 
@@ -93,7 +90,7 @@ export function SiteFooter() {
             © {new Date().getFullYear()} VeebSecurity
           </p>
           <p className="mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
-            v1.0 · Stable
+            Projektitöö
           </p>
         </div>
       </div>

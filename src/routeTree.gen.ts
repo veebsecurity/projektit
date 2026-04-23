@@ -9,38 +9,141 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TooriistadRouteImport } from './routes/tooriistad'
+import { Route as TeaveRouteImport } from './routes/teave'
+import { Route as KkkRouteImport } from './routes/kkk'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as TeemadIndexRouteImport } from './routes/teemad.index'
+import { Route as TeemadSlugRouteImport } from './routes/teemad.$slug'
+import { Route as KategooriadSlugRouteImport } from './routes/kategooriad.$slug'
 
+const TooriistadRoute = TooriistadRouteImport.update({
+  id: '/tooriistad',
+  path: '/tooriistad',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TeaveRoute = TeaveRouteImport.update({
+  id: '/teave',
+  path: '/teave',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KkkRoute = KkkRouteImport.update({
+  id: '/kkk',
+  path: '/kkk',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TeemadIndexRoute = TeemadIndexRouteImport.update({
+  id: '/teemad/',
+  path: '/teemad/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TeemadSlugRoute = TeemadSlugRouteImport.update({
+  id: '/teemad/$slug',
+  path: '/teemad/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KategooriadSlugRoute = KategooriadSlugRouteImport.update({
+  id: '/kategooriad/$slug',
+  path: '/kategooriad/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/kkk': typeof KkkRoute
+  '/teave': typeof TeaveRoute
+  '/tooriistad': typeof TooriistadRoute
+  '/kategooriad/$slug': typeof KategooriadSlugRoute
+  '/teemad/$slug': typeof TeemadSlugRoute
+  '/teemad/': typeof TeemadIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/kkk': typeof KkkRoute
+  '/teave': typeof TeaveRoute
+  '/tooriistad': typeof TooriistadRoute
+  '/kategooriad/$slug': typeof KategooriadSlugRoute
+  '/teemad/$slug': typeof TeemadSlugRoute
+  '/teemad': typeof TeemadIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/kkk': typeof KkkRoute
+  '/teave': typeof TeaveRoute
+  '/tooriistad': typeof TooriistadRoute
+  '/kategooriad/$slug': typeof KategooriadSlugRoute
+  '/teemad/$slug': typeof TeemadSlugRoute
+  '/teemad/': typeof TeemadIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/kkk'
+    | '/teave'
+    | '/tooriistad'
+    | '/kategooriad/$slug'
+    | '/teemad/$slug'
+    | '/teemad/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/kkk'
+    | '/teave'
+    | '/tooriistad'
+    | '/kategooriad/$slug'
+    | '/teemad/$slug'
+    | '/teemad'
+  id:
+    | '__root__'
+    | '/'
+    | '/kkk'
+    | '/teave'
+    | '/tooriistad'
+    | '/kategooriad/$slug'
+    | '/teemad/$slug'
+    | '/teemad/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  KkkRoute: typeof KkkRoute
+  TeaveRoute: typeof TeaveRoute
+  TooriistadRoute: typeof TooriistadRoute
+  KategooriadSlugRoute: typeof KategooriadSlugRoute
+  TeemadSlugRoute: typeof TeemadSlugRoute
+  TeemadIndexRoute: typeof TeemadIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/tooriistad': {
+      id: '/tooriistad'
+      path: '/tooriistad'
+      fullPath: '/tooriistad'
+      preLoaderRoute: typeof TooriistadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/teave': {
+      id: '/teave'
+      path: '/teave'
+      fullPath: '/teave'
+      preLoaderRoute: typeof TeaveRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kkk': {
+      id: '/kkk'
+      path: '/kkk'
+      fullPath: '/kkk'
+      preLoaderRoute: typeof KkkRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +151,38 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/teemad/': {
+      id: '/teemad/'
+      path: '/teemad'
+      fullPath: '/teemad/'
+      preLoaderRoute: typeof TeemadIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/teemad/$slug': {
+      id: '/teemad/$slug'
+      path: '/teemad/$slug'
+      fullPath: '/teemad/$slug'
+      preLoaderRoute: typeof TeemadSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kategooriad/$slug': {
+      id: '/kategooriad/$slug'
+      path: '/kategooriad/$slug'
+      fullPath: '/kategooriad/$slug'
+      preLoaderRoute: typeof KategooriadSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  KkkRoute: KkkRoute,
+  TeaveRoute: TeaveRoute,
+  TooriistadRoute: TooriistadRoute,
+  KategooriadSlugRoute: KategooriadSlugRoute,
+  TeemadSlugRoute: TeemadSlugRoute,
+  TeemadIndexRoute: TeemadIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -51,10 +51,7 @@ function CategoryPage() {
             <span aria-hidden>/</span>
             <span className="text-foreground/60">{category.title}</span>
           </nav>
-          <span className="mono text-[11px] uppercase tracking-[0.22em] text-primary">
-            Kategooria
-          </span>
-          <h1 className="mt-3 font-display text-4xl font-semibold tracking-tight md:text-6xl">
+          <h1 className="font-display text-4xl font-semibold tracking-tight md:text-6xl">
             {category.title}
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">

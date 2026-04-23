@@ -22,10 +22,7 @@ function AboutPage() {
       <SiteHeader />
       <section className="border-b border-border/60">
         <div className="mx-auto max-w-3xl px-6 py-20">
-          <span className="mono text-[11px] uppercase tracking-[0.22em] text-primary">
-            Teave
-          </span>
-          <h1 className="mt-3 font-display text-4xl font-semibold tracking-tight md:text-6xl">
+          <h1 className="font-display text-4xl font-semibold tracking-tight md:text-6xl">
             Mida ja miks
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-muted-foreground">

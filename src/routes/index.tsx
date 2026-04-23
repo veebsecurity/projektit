@@ -8,11 +8,11 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "VeebSecurity — Praktiline küberturvalisuse juhend" },
+      { title: "VeebSecurity — küberturvalisuse juhend" },
       {
         name: "description",
         content:
-          "Eestikeelne praktiline juhend digitaalseks turvalisuseks. Paroolid, phishing, VPN, krüpteerimine ja küberhügieen ühes kohas.",
+          "Lihtne eestikeelne juhend igapäevaseks digiturvalisuseks. Paroolid, phishing, VPN, krüpteerimine, varundus ja kasulikud tööriistad.",
       },
     ],
   }),
@@ -26,141 +26,133 @@ function Index() {
       <SiteHeader />
 
       {/* HERO */}
-      <section className="relative overflow-hidden border-b border-border/60">
-        <div className="absolute inset-0 grid-bg opacity-50" aria-hidden />
-        <div className="absolute inset-0 scanlines opacity-[0.35]" aria-hidden />
-        <div className="relative mx-auto max-w-6xl px-6 pt-24 pb-28">
-          <div className="flex items-center gap-3">
-            <span className="inline-flex h-2 w-2 rounded-full bg-primary shadow-[0_0_10px_currentColor]" />
-            <span className="mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
-              Eesti küberturvalisuse juhend · v1.0
+      <section className="border-b border-border/60">
+        <div className="mx-auto max-w-5xl px-6 pt-20 pb-20 md:pt-28 md:pb-24">
+          <h1 className="max-w-4xl font-display text-4xl leading-[1.1] tracking-tight md:text-6xl">
+            Iga inimene jätab netis jälgi.
+            <br className="hidden md:block" />{" "}
+            <span className="text-muted-foreground">
+              Selle saidi mõte on aidata sul aru saada, milliseid ja miks see
+              oluline on.
             </span>
-          </div>
-
-          <h1 className="mt-7 max-w-4xl font-display text-5xl leading-[1.05] tracking-tight md:text-7xl">
-            Digitaalne turvalisus,{" "}
-            <span className="text-gradient">mis töötab</span>{" "}
-            <br className="hidden md:block" />
-            päriselus
-            <span className="blink" aria-hidden />
           </h1>
 
-          <p className="mt-7 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            Lihtne juhend igapäevaseks digiturvalisuseks. Paroolid, phishing, VPN,
-            krüpteerimine ja kasulikud tööriistad — kõik ühes kohas, lihtsas keeles.
+          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-foreground/80">
+            See ei ole hirmutamine. Suur osa rünnakutest ei vali ohvreid käsitsi —
+            need on automaatsed ja proovivad lihtsalt kõike, mis liigub. Hea
+            uudis: paar lihtsat harjumust katavad enamiku riske ära.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-3">
             <Link
-              to="/teemad"
-              className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 mono text-sm font-semibold text-primary-foreground transition-all hover:opacity-90 hover:shadow-[0_0_30px_-5px_var(--primary)]"
+              to="/miks"
+              className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
             >
-              Vaata kõiki teemasid
+              Miks see oluline on
               <span aria-hidden>→</span>
             </Link>
             <Link
-              to="/kkk"
-              className="inline-flex items-center gap-2 rounded-md border border-border-strong bg-surface px-5 py-3 mono text-sm font-medium text-foreground transition-colors hover:border-primary/50 hover:text-primary"
+              to="/teemad"
+              className="inline-flex items-center gap-2 rounded-md border border-border-strong bg-surface px-5 py-3 text-sm font-medium text-foreground transition-colors hover:border-primary/50 hover:text-primary"
             >
-              Korduma kippuvad küsimused
+              Vaata teemasid
             </Link>
           </div>
+        </div>
+      </section>
 
+      {/* WHY YOU MATTER */}
+      <section className="border-b border-border/60 bg-surface/30">
+        <div className="mx-auto max-w-5xl px-6 py-20">
+          <div className="max-w-2xl">
+            <h2 className="font-display text-3xl font-semibold tracking-tight md:text-4xl">
+              {"„Mul pole midagi varjata” on müüt"}
+            </h2>
+            <p className="mt-5 text-base leading-relaxed text-foreground/80">
+              See lause kõlab loogiliselt, aga vaatame seda lähemalt. Sa lukustad
+              kodus vannitoa ukse, paned kardinad ette ja ei pane oma SMS-e
+              tänavakuulutusele. Mitte sellepärast, et midagi varjata, vaid
+              sellepärast, et privaatsus on inimeseks olemise osa. Veebis kehtib
+              täpselt sama loogika.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-px overflow-hidden rounded-xl border border-border bg-border md:grid-cols-3">
+            <ReasonCard
+              title={"Sa oled sihtmärk, isegi kui sa pole keegi „tähtis”"}
+              body="Suur osa rünnakutest on automaatsed. Robotid proovivad miljoneid kontosid päevas — kui sa kasutad sama parooli mitmes kohas, oled juba ohus. See pole isiklik, see on lihtsalt mass."
+            />
+            <ReasonCard
+              title="Sinu konto on väärtuslik"
+              body="Pangakonto on selge, aga ka su Instagram, e-post või Steami konto on raha väärt. Varastatud kontosid müüakse, kasutatakse pettusteks su sõprade vastu või tühjendatakse virtuaalsetest esemetest."
+            />
+            <ReasonCard
+              title="Sinu andmed mõjutavad ka teisi"
+              body="Kui sinu e-post on lekkinud, saadetakse phishing-kirju ka su perele. Kui sinu Facebook on häkitud, kasutatakse seda sõprade petmiseks. Privaatsus on ka kollektiivne asi."
+            />
+          </div>
+
+          <div className="mt-8">
+            <Link
+              to="/miks"
+              className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+            >
+              Loe pikemalt, miks see kõik oluline on{" "}
+              <span aria-hidden>→</span>
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* CATEGORIES */}
-      <section className="mx-auto max-w-6xl px-6 py-24">
-        <div className="flex items-end justify-between gap-6 border-b border-border/60 pb-6">
+      <section className="mx-auto max-w-5xl px-6 py-20">
+        <div className="flex items-end justify-between gap-6 border-b border-border/60 pb-5">
           <div>
-            <span className="mono text-[11px] uppercase tracking-[0.22em] text-primary">
-              01 · Sisukord
-            </span>
-            <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight md:text-4xl">
-              Vali teema ja sukeldu sisse
+            <h2 className="font-display text-2xl font-semibold tracking-tight md:text-3xl">
+              Vali teema
             </h2>
+            <p className="mt-2 max-w-xl text-sm text-muted-foreground">
+              Kõik on jaotatud lühikesteks osadeks — võta üks korraga.
+            </p>
           </div>
           <Link
             to="/teemad"
-            className="hidden md:inline-flex items-center gap-2 mono text-xs text-primary hover:underline"
+            className="hidden md:inline-flex items-center gap-2 text-sm text-primary hover:underline"
           >
             Kõik teemad <span aria-hidden>→</span>
           </Link>
         </div>
 
-        <div className="mt-10 grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
-          {categories.map((cat, i) => (
+        <div className="mt-8 grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+          {categories.map((cat) => (
             <Link
               key={cat.slug}
               to="/kategooriad/$slug"
               params={{ slug: cat.slug }}
-              className="group relative flex flex-col gap-3 bg-card p-7 transition-colors hover:bg-surface-elevated"
+              className="group relative flex flex-col gap-3 bg-card p-6 transition-colors hover:bg-surface-elevated"
             >
-              <div className="flex items-center justify-between">
-                <span className="mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <span className="mono text-[11px] text-primary/70">
-                  {cat.topics.length} teemat
-                </span>
-              </div>
               <h3 className="font-display text-lg font-semibold tracking-tight transition-colors group-hover:text-primary">
                 {cat.title}
               </h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">{cat.description}</p>
-              <div className="mt-auto pt-4 mono text-xs text-primary/70 transition-colors group-hover:text-primary">
-                Sisene →
-              </div>
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                {cat.description}
+              </p>
             </Link>
           ))}
         </div>
       </section>
 
       {/* FEATURED TOPICS */}
-      <section className="mx-auto max-w-6xl px-6 py-12">
-        <div className="border-b border-border/60 pb-6">
-          <span className="mono text-[11px] uppercase tracking-[0.22em] text-primary">
-            02 · Soovitatud
-          </span>
-          <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight md:text-4xl">
-            Alusta nendest
+      <section className="mx-auto max-w-5xl px-6 pb-20">
+        <div className="border-b border-border/60 pb-5">
+          <h2 className="font-display text-2xl font-semibold tracking-tight md:text-3xl">
+            Hea koht alustada
           </h2>
         </div>
-        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {featured.map((topic, i) => (
             <TopicCard key={topic.slug} topic={topic} index={i} />
           ))}
-        </div>
-      </section>
-
-      {/* CALL OUT */}
-      <section className="mx-auto max-w-6xl px-6 py-24">
-        <div className="surface-card relative overflow-hidden p-10 md:p-14">
-          <div className="absolute -right-20 -top-20 h-80 w-80 rounded-full bg-primary/10 blur-3xl" aria-hidden />
-          <span className="mono text-[11px] uppercase tracking-[0.22em] text-primary">
-            03 · Põhimõte
-          </span>
-          <h2 className="mt-3 max-w-3xl font-display text-3xl leading-tight tracking-tight md:text-4xl">
-            Turvalisus ei ole toode — see on väike harjumus iga päev.
-          </h2>
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
-            Ükski tööriist ei kaitse sind, kui sa ei tea, mida ja miks kaitsta.
-            See juhend annab vajaliku põhja, et teha targemaid valikuid netis.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link
-              to="/teemad"
-              className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 mono text-sm font-semibold text-primary-foreground transition-all hover:opacity-90"
-            >
-              Alusta esimesest teemast →
-            </Link>
-            <Link
-              to="/tooriistad"
-              className="inline-flex items-center gap-2 rounded-md border border-border-strong bg-background/50 px-5 py-3 mono text-sm font-medium text-foreground transition-colors hover:border-primary/50 hover:text-primary"
-            >
-              Vaata tööriistu
-            </Link>
-          </div>
         </div>
       </section>
 
@@ -169,3 +161,15 @@ function Index() {
   );
 }
 
+function ReasonCard({ title, body }: { title: string; body: string }) {
+  return (
+    <div className="bg-card p-7">
+      <h3 className="font-display text-base font-semibold leading-snug tracking-tight">
+        {title}
+      </h3>
+      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+        {body}
+      </p>
+    </div>
+  );
+}

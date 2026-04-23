@@ -13,9 +13,6 @@ export function TopicCard({ topic, index = 0 }: { topic: Topic; index?: number }
         <span className="mono text-[10px] uppercase tracking-[0.18em] text-primary/80">
           {String(index + 1).padStart(2, "0")} · {topic.category}
         </span>
-        <span className="mono text-[10px] text-muted-foreground">
-          {topic.readMinutes} min
-        </span>
       </div>
       <h3 className="font-display text-lg font-semibold leading-snug text-foreground transition-colors group-hover:text-primary">
         {topic.title}

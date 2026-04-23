@@ -29,9 +29,9 @@ function AboutPage() {
             Mida ja miks
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-            VeebSecurity on eestikeelne, vabalt kasutatav juhend digitaalseks
-            turvalisuseks. Eesmärk on anda igale internetikasutajale baasteadmised
-            tegelike ohtude kohta — ilma hirmutamata, ilma tarbetu žargoonita.
+            See sait on koolitööna tehtud lihtne juhend digiturvalisuseks. Mõte
+            on anda tavalisele inimesele põhiteadmised — mis ohud üldse on,
+            kuidas neid ära tunda ja milliste tööriistadega end kaitsta.
           </p>
         </div>
       </section>
@@ -40,10 +40,10 @@ function AboutPage() {
         <div className="space-y-10">
           <Block title="Põhimõtted">
             <p>
-              Kogu sisu on koostatud avalike ja usaldusväärsete allikate põhjal —
-              RIA, CISA, NIST, OWASP. Soovitused on praktilised ja täpsed, mitte
-              teoreetilised. Kui mingit nõuannet siin pole, siis seetõttu, et see ei
-              ole keskmise kasutaja jaoks vajalik.
+              Sisu on kokku pandud avalike ja usaldusväärsete allikate põhjal —
+              RIA, CISA, OWASP. Soovitused on praktilised, mitte teoreetilised.
+              Kui mõni nõuanne siin puudub, siis enamasti seetõttu, et see
+              tavakasutaja jaoks oluline pole.
             </p>
           </Block>
 

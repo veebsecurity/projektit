@@ -46,9 +46,8 @@ function Index() {
           </h1>
 
           <p className="mt-7 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            Praktiline juhend igale internetikasutajale. Õpi tundma paroole, phishingut,
-            VPN-e, krüpteerimist ja igapäevast küberhügieeni — eesti keeles, ilma
-            tarbetu žargoonita.
+            Lihtne juhend igapäevaseks digiturvalisuseks. Paroolid, phishing, VPN,
+            krüpteerimine ja kasulikud tööriistad — kõik ühes kohas, lihtsas keeles.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-3">
@@ -67,13 +66,6 @@ function Index() {
             </Link>
           </div>
 
-          {/* Stats strip */}
-          <div className="mt-16 grid max-w-3xl grid-cols-2 gap-px overflow-hidden rounded-xl border border-border bg-border md:grid-cols-4">
-            <Stat value="10" label="Kategooriat" />
-            <Stat value="28" label="Teemat" />
-            <Stat value="6" label="KKK vastust" />
-            <Stat value="100%" label="Eesti keeles" />
-          </div>
         </div>
       </section>
 
@@ -85,7 +77,7 @@ function Index() {
               01 · Sisukord
             </span>
             <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight md:text-4xl">
-              Kümme kategooriat, üks juhend
+              Vali teema ja sukeldu sisse
             </h2>
           </div>
           <Link
@@ -149,12 +141,11 @@ function Index() {
             03 · Põhimõte
           </span>
           <h2 className="mt-3 max-w-3xl font-display text-3xl leading-tight tracking-tight md:text-4xl">
-            Turvalisus ei ole toode — see on harjumus, mida ehitad iga päevaga.
+            Turvalisus ei ole toode — see on väike harjumus iga päev.
           </h2>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
-            Ükski tööriist ei kaitse sind, kui sa ei tea, mida kaitsta. Selle juhendi
-            eesmärk on anda sulle baasteadmised, et teha targemaid otsuseid igapäevases
-            digitaalses elus.
+            Ükski tööriist ei kaitse sind, kui sa ei tea, mida ja miks kaitsta.
+            See juhend annab vajaliku põhja, et teha targemaid valikuid netis.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
@@ -178,15 +169,3 @@ function Index() {
   );
 }
 
-function Stat({ value, label }: { value: string; label: string }) {
-  return (
-    <div className="bg-surface p-5">
-      <div className="font-display text-3xl font-semibold tracking-tight text-primary">
-        {value}
-      </div>
-      <div className="mt-1 mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-        {label}
-      </div>
-    </div>
-  );
-}

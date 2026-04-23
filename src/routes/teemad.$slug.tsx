@@ -77,10 +77,6 @@ function TopicPage() {
             <span className="mono text-[11px] uppercase tracking-[0.22em] text-primary">
               {category?.title ?? topic.category}
             </span>
-            <span className="h-1 w-1 rounded-full bg-muted-foreground/50" />
-            <span className="mono text-[11px] text-muted-foreground">
-              {topic.readMinutes} min lugemist
-            </span>
           </div>
           <h1 className="mt-5 font-display text-4xl font-semibold leading-tight tracking-tight md:text-5xl">
             {topic.title}

@@ -416,7 +416,7 @@ export const topics: Topic[] = [
     slug: "millal-vpn",
     category: "vpn",
     title: "Millal VPN on kasulik?",
-    intro: "VPN ei ole hõbekuul, aga teatud olukordades hädavajalik.",
+    intro: "VPN ei lahenda kõiki probleeme, aga teatud olukordades on see hädavajalik.",
     readMinutes: 3,
     sections: [
       {
@@ -446,7 +446,7 @@ export const topics: Topic[] = [
       {
         title: "Kas VPN teeb anonüümseks?",
         content:
-          "Ei. VPN peidab sinu IP-aadressi veebilehtede eest, aga VPN-teenuse pakkuja näeb sinu liiklust. Sa logid endiselt sisse oma kontodele, kasutad sama brauserit ja jätad digitaalseid jälgi. VPN on privaatsuse tööriist, mitte nähtamatuse keep. Tõeliseks anonüümsuseks oleks vaja Tor'i + VPN + eraldi seade + käitumise muutmine.",
+          "Ei. VPN peidab sinu IP-aadressi veebilehtede eest, aga VPN-teenuse pakkuja näeb sinu liiklust. Sa logid endiselt sisse oma kontodele, kasutad sama brauserit ja jätad digitaalseid jälgi. VPN on privaatsuse tööriist, mitte nähtamatuse rüü. Tõeliseks anonüümsuseks oleks vaja Tor'i + VPN + eraldi seade + käitumise muutmine.",
       },
     ],
   },
@@ -684,36 +684,305 @@ export const faqs: { question: string; answer: string }[] = [
   },
 ];
 
-export const tools: { name: string; description: string; url: string }[] = [
+export type Tool = {
+  name: string;
+  description: string;
+  url: string;
+  category: string;
+  free?: boolean;
+};
+
+export const toolCategories: { slug: string; title: string; description: string }[] = [
   {
-    name: "Have I Been Pwned",
-    description: "Kontrolli, kas sinu e-posti aadress on andmelekete andmebaasis.",
-    url: "https://haveibeenpwned.com",
+    slug: "paroolid",
+    title: "Paroolihaldurid",
+    description: "Hoia kõiki paroole turvaliselt ühes kohas.",
   },
+  {
+    slug: "lekked",
+    title: "Andmelekete kontroll",
+    description: "Kontrolli, kas su konto on kuskil lekkinud.",
+  },
+  {
+    slug: "2fa",
+    title: "Kahefaktoriline autentimine",
+    description: "Lisa kontodele teine kaitsekiht.",
+  },
+  {
+    slug: "vpn",
+    title: "VPN-id",
+    description: "Krüpteeritud ühendus, eriti avalikus Wi-Fis.",
+  },
+  {
+    slug: "viirus",
+    title: "Viirusetõrje ja skanner",
+    description: "Kontrolli faile, linke ja seadmeid.",
+  },
+  {
+    slug: "brauser",
+    title: "Brauser ja privaatsus",
+    description: "Vähem jälgimist, rohkem rahu.",
+  },
+  {
+    slug: "sonumid",
+    title: "Krüpteeritud suhtlus",
+    description: "Sõnumid, mida keegi vahepealt ei loe.",
+  },
+  {
+    slug: "varundus",
+    title: "Varukoopiad ja krüpteerimine",
+    description: "Kaitse oma faile kadumise ja uudistamise eest.",
+  },
+  {
+    slug: "ametlik",
+    title: "Ametlikud allikad",
+    description: "Kust saada usaldusväärset infot ja teateid.",
+  },
+];
+
+export const tools: Tool[] = [
+  // Paroolihaldurid
   {
     name: "Bitwarden",
-    description: "Avatud lähtekoodiga paroolihaldur kõigile platvormidele.",
+    description: "Avatud lähtekoodiga paroolihaldur. Tasuta versioon katab enamiku vajadusi.",
     url: "https://bitwarden.com",
+    category: "paroolid",
+    free: true,
   },
   {
+    name: "1Password",
+    description: "Mugav ja viimistletud paroolihaldur, hea perekonna plaaniga.",
+    url: "https://1password.com",
+    category: "paroolid",
+  },
+  {
+    name: "KeePassXC",
+    description: "Täielikult lokaalne paroolihaldur — andmed jäävad ainult sinu seadmesse.",
+    url: "https://keepassxc.org",
+    category: "paroolid",
+    free: true,
+  },
+  {
+    name: "Proton Pass",
+    description: "Protoni paroolihaldur, mis tuleb krüpteeritud meili paketiga kaasa.",
+    url: "https://proton.me/pass",
+    category: "paroolid",
+    free: true,
+  },
+
+  // Lekked
+  {
+    name: "Have I Been Pwned",
+    description: "Sisesta oma e-post ja näe, millistest lekkidest see on läbi käinud.",
+    url: "https://haveibeenpwned.com",
+    category: "lekked",
+    free: true,
+  },
+  {
+    name: "Firefox Monitor",
+    description: "Mozilla pakutav lekete jälgija — saab teate, kui su andmed lekivad uuesti.",
+    url: "https://monitor.mozilla.org",
+    category: "lekked",
+    free: true,
+  },
+  {
+    name: "DeHashed",
+    description: "Põhjalikum andmelekete otsing (mõned funktsioonid tasulised).",
+    url: "https://dehashed.com",
+    category: "lekked",
+  },
+
+  // 2FA
+  {
+    name: "Aegis Authenticator",
+    description: "Tasuta ja avatud Androidi autentija, varukoopiate toega.",
+    url: "https://getaegis.app",
+    category: "2fa",
+    free: true,
+  },
+  {
+    name: "2FAS",
+    description: "Lihtne ja ilus autentija nii iOS-ile kui Androidile.",
+    url: "https://2fas.com",
+    category: "2fa",
+    free: true,
+  },
+  {
+    name: "Ente Auth",
+    description: "Krüpteeritud sünk seadmete vahel, avatud lähtekoodiga.",
+    url: "https://ente.io/auth",
+    category: "2fa",
+    free: true,
+  },
+  {
+    name: "YubiKey",
+    description: "Füüsiline turvavõti — kõige tugevam 2FA-vorm tähtsate kontode jaoks.",
+    url: "https://yubico.com",
+    category: "2fa",
+  },
+
+  // VPN
+  {
+    name: "ProtonVPN",
+    description: "Tasuta plaan ilma andmelimiidita, asub Šveitsis.",
+    url: "https://protonvpn.com",
+    category: "vpn",
+    free: true,
+  },
+  {
+    name: "Mullvad VPN",
+    description: "Privaatsusele keskendunud, ei nõua kontot — ainult juhuslik number.",
+    url: "https://mullvad.net",
+    category: "vpn",
+  },
+  {
+    name: "IVPN",
+    description: "Auditeeritud, ei logi midagi, läbipaistev hinnakiri.",
+    url: "https://ivpn.net",
+    category: "vpn",
+  },
+
+  // Viirus / skanner
+  {
     name: "VirusTotal",
-    description: "Skaneeri kahtlasi faile ja URL-e 70+ viirusetõrjega korraga.",
+    description: "Lae üles fail või link ja saa kontrolli 70+ viirusetõrje vastu.",
     url: "https://virustotal.com",
+    category: "viirus",
+    free: true,
   },
   {
     name: "Malwarebytes",
-    description: "Pahavara eemaldamise tööriist Windowsile, Macile ja mobiilile.",
+    description: "Tasuta skanner, mis leiab pahavara, mille viirusetõrje ei märka.",
     url: "https://malwarebytes.com",
+    category: "viirus",
+    free: true,
   },
   {
-    name: "ProtonVPN",
-    description: "Privaatsusele orienteeritud VPN, tasuta plaaniga ilma andmelimiidita.",
-    url: "https://protonvpn.com",
+    name: "Microsoft Defender",
+    description: "Windowsisse sisseehitatud viirusetõrje — enamikule kasutajatest piisab.",
+    url: "https://www.microsoft.com/en-us/windows/comprehensive-security",
+    category: "viirus",
+    free: true,
   },
   {
-    name: "Riigi Infosüsteemi Amet (RIA)",
-    description: "Eesti küberturvalisuse meeskond — teated, juhised, intsidentide raporteerimine.",
+    name: "URLVoid",
+    description: "Kontrolli, kas mõni veebileht on tuntud kui pahatahtlik.",
+    url: "https://urlvoid.com",
+    category: "viirus",
+    free: true,
+  },
+
+  // Brauser / privaatsus
+  {
+    name: "Firefox",
+    description: "Avatud brauser tugeva privaatsuskaitsega, mis ei kuulu reklaamifirmale.",
+    url: "https://firefox.com",
+    category: "brauser",
+    free: true,
+  },
+  {
+    name: "Brave",
+    description: "Chromiumi-põhine brauser, mis blokeerib reklaame ja jälgijaid vaikimisi.",
+    url: "https://brave.com",
+    category: "brauser",
+    free: true,
+  },
+  {
+    name: "uBlock Origin",
+    description: "Parim reklaamiblokeerija — väike, kiire ja avatud.",
+    url: "https://github.com/gorhill/uBlock",
+    category: "brauser",
+    free: true,
+  },
+  {
+    name: "Privacy Badger",
+    description: "EFF-i jälgijate blokeerija, mis õpib ise ära tegijad.",
+    url: "https://privacybadger.org",
+    category: "brauser",
+    free: true,
+  },
+  {
+    name: "DuckDuckGo",
+    description: "Otsingumootor, mis ei kogu su otsinguid ega ehita profiili.",
+    url: "https://duckduckgo.com",
+    category: "brauser",
+    free: true,
+  },
+
+  // Sõnumid
+  {
+    name: "Signal",
+    description: "Krüpteeritud sõnumiäpp, mida soovitavad turvaeksperdid kõikjal maailmas.",
+    url: "https://signal.org",
+    category: "sonumid",
+    free: true,
+  },
+  {
+    name: "Proton Mail",
+    description: "Krüpteeritud e-post Šveitsist. Tasuta plaan piisav igapäevaseks.",
+    url: "https://proton.me/mail",
+    category: "sonumid",
+    free: true,
+  },
+  {
+    name: "Tuta Mail",
+    description: "Saksa krüpteeritud e-posti teenus, avatud lähtekoodiga.",
+    url: "https://tuta.com",
+    category: "sonumid",
+    free: true,
+  },
+
+  // Varundus
+  {
+    name: "Cryptomator",
+    description: "Krüpteeri pilves olevad failid (Drive, Dropbox jne) enne üleslaadimist.",
+    url: "https://cryptomator.org",
+    category: "varundus",
+    free: true,
+  },
+  {
+    name: "VeraCrypt",
+    description: "Loo krüpteeritud kettad ja faili-konteinerid kohalikuks salvestuseks.",
+    url: "https://veracrypt.fr",
+    category: "varundus",
+    free: true,
+  },
+  {
+    name: "Proton Drive",
+    description: "Krüpteeritud pilvekettaruum — failid loetavad ainult sulle.",
+    url: "https://proton.me/drive",
+    category: "varundus",
+    free: true,
+  },
+
+  // Ametlikud
+  {
+    name: "RIA — Riigi Infosüsteemi Amet",
+    description: "Eesti küberturvalisuse keskus. Teated, juhised ja intsidentide raporteerimine.",
     url: "https://ria.ee",
+    category: "ametlik",
+    free: true,
+  },
+  {
+    name: "ID.ee",
+    description: "Eesti ID-kaardi, Mobiil-ID ja Smart-ID ametlik info ja abi.",
+    url: "https://id.ee",
+    category: "ametlik",
+    free: true,
+  },
+  {
+    name: "itvaatlik.ee",
+    description: "RIA portaal noortele ja peredele turvaliseks netikasutuseks.",
+    url: "https://itvaatlik.ee",
+    category: "ametlik",
+    free: true,
+  },
+  {
+    name: "CISA",
+    description: "USA küberturvalisuse amet — head juhendid ja hoiatused inglise keeles.",
+    url: "https://cisa.gov",
+    category: "ametlik",
+    free: true,
   },
 ];
 

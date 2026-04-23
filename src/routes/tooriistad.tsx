@@ -24,10 +24,7 @@ function ToolsPage() {
 
       <section className="border-b border-border/60">
         <div className="mx-auto max-w-6xl px-6 py-20">
-          <span className="mono text-[11px] uppercase tracking-[0.22em] text-primary">
-            Ressursid
-          </span>
-          <h1 className="mt-3 font-display text-4xl font-semibold tracking-tight md:text-6xl">
+          <h1 className="font-display text-4xl font-semibold tracking-tight md:text-6xl">
             Kasulikud tööriistad
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
@@ -40,7 +37,7 @@ function ToolsPage() {
               <a
                 key={c.slug}
                 href={`#${c.slug}`}
-                className="rounded-md border border-border-strong bg-surface px-3 py-1.5 mono text-[11px] uppercase tracking-[0.16em] text-muted-foreground transition-colors hover:border-primary/50 hover:text-primary"
+                className="rounded-md border border-border-strong bg-surface px-3 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:border-primary/50 hover:text-primary"
               >
                 {c.title}
               </a>
@@ -51,16 +48,13 @@ function ToolsPage() {
 
       <div className="mx-auto max-w-6xl px-6 py-16">
         <div className="space-y-20">
-          {toolCategories.map((cat, ci) => {
+          {toolCategories.map((cat) => {
             const catTools = tools.filter((t) => t.category === cat.slug);
             if (catTools.length === 0) return null;
             return (
               <section key={cat.slug} id={cat.slug} className="scroll-mt-24">
                 <div className="border-b border-border/60 pb-5">
-                  <span className="mono text-[11px] uppercase tracking-[0.22em] text-primary">
-                    {String(ci + 1).padStart(2, "0")}
-                  </span>
-                  <h2 className="mt-1 font-display text-2xl font-semibold tracking-tight md:text-3xl">
+                  <h2 className="font-display text-2xl font-semibold tracking-tight md:text-3xl">
                     {cat.title}
                   </h2>
                   <p className="mt-2 max-w-2xl text-sm text-muted-foreground">

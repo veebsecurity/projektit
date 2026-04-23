@@ -10,7 +10,7 @@ export const Route = createFileRoute("/miks")({
       {
         name: "description",
         content:
-          "Miks iga tavaline inimene peaks netis end kaitsma — ohud, eetika ja privaatsuse põhjused lihtsas keeles.",
+          "Miks iga tavaline inimene peaks netis end kaitsma. Ohud, eetika ja privaatsuse põhjused lihtsas keeles.",
       },
     ],
   }),
@@ -130,7 +130,7 @@ function WhyPage() {
           </p>
           <ul className="mt-3 space-y-2 border-l-2 border-primary/40 pl-5">
             <li>Iga konto jaoks unikaalne parool (paroolihaldur teeb selle lihtsaks).</li>
-            <li>2FA tähtsates kontodes — eriti e-postil ja pangal.</li>
+            <li>2FA tähtsates kontodes, eriti e-postil ja pangal.</li>
             <li>Tarkvara uuendused, kui need tulevad.</li>
             <li>Mõtle korraks enne, kui klõpsad kahtlasel lingil.</li>
             <li>Varukoopia tähtsatest failidest.</li>

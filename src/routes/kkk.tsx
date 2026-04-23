@@ -23,10 +23,7 @@ function KKKPage() {
       <SiteHeader />
       <section className="border-b border-border/60">
         <div className="mx-auto max-w-6xl px-6 py-20">
-          <span className="mono text-[11px] uppercase tracking-[0.22em] text-primary">
-            Tugi
-          </span>
-          <h1 className="mt-3 font-display text-4xl font-semibold tracking-tight md:text-6xl">
+          <h1 className="font-display text-4xl font-semibold tracking-tight md:text-6xl">
             Korduma kippuvad küsimused
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
@@ -43,14 +40,9 @@ function KKKPage() {
               className="group py-6 transition-colors [&_summary::-webkit-details-marker]:hidden"
             >
               <summary className="flex cursor-pointer items-start justify-between gap-4">
-                <div className="flex items-baseline gap-4">
-                  <span className="mono text-[11px] uppercase tracking-[0.22em] text-primary">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <h3 className="font-display text-lg font-semibold leading-snug tracking-tight transition-colors group-hover:text-primary">
-                    {f.question}
-                  </h3>
-                </div>
+                <h3 className="font-display text-lg font-semibold leading-snug tracking-tight transition-colors group-hover:text-primary">
+                  {f.question}
+                </h3>
                 <span
                   aria-hidden
                   className="mono mt-1 text-lg text-primary transition-transform group-open:rotate-45"

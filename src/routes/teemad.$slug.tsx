@@ -52,7 +52,7 @@ function TopicPage() {
       <SiteHeader />
 
       <article className="mx-auto max-w-3xl px-6 py-16 md:py-24">
-        <nav className="mono mb-8 flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
+        <nav className="mb-8 flex items-center gap-2 text-xs text-muted-foreground">
           <Link to="/teemad" className="transition-colors hover:text-primary">
             Teemad
           </Link>

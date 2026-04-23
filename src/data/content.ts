@@ -416,7 +416,7 @@ export const topics: Topic[] = [
     slug: "millal-vpn",
     category: "vpn",
     title: "Millal VPN on kasulik?",
-    intro: "VPN ei ole hõbekuul, aga teatud olukordades hädavajalik.",
+    intro: "VPN ei lahenda kõiki probleeme, aga teatud olukordades on see hädavajalik.",
     readMinutes: 3,
     sections: [
       {
@@ -446,7 +446,7 @@ export const topics: Topic[] = [
       {
         title: "Kas VPN teeb anonüümseks?",
         content:
-          "Ei. VPN peidab sinu IP-aadressi veebilehtede eest, aga VPN-teenuse pakkuja näeb sinu liiklust. Sa logid endiselt sisse oma kontodele, kasutad sama brauserit ja jätad digitaalseid jälgi. VPN on privaatsuse tööriist, mitte nähtamatuse keep. Tõeliseks anonüümsuseks oleks vaja Tor'i + VPN + eraldi seade + käitumise muutmine.",
+          "Ei. VPN peidab sinu IP-aadressi veebilehtede eest, aga VPN-teenuse pakkuja näeb sinu liiklust. Sa logid endiselt sisse oma kontodele, kasutad sama brauserit ja jätad digitaalseid jälgi. VPN on privaatsuse tööriist, mitte nähtamatuse rüü. Tõeliseks anonüümsuseks oleks vaja Tor'i + VPN + eraldi seade + käitumise muutmine.",
       },
     ],
   },

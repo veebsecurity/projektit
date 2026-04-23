@@ -1,4 +1,4 @@
-// Sisustruktuur — kogutud algselt VeebSecurity sisust.
+// Sisustruktuur, kogutud algselt VeebSecurity sisust.
 // Iga teema on slug-iga URL-is: /teemad/{slug}
 
 export type Subsection = {
@@ -46,7 +46,7 @@ export const categories: Category[] = [
   {
     slug: "pahavara",
     title: "Pahavara ja viirused",
-    description: "Viirused, troojad, lunavara — kuidas need levivad ja kuidas end kaitsta.",
+    description: "Viirused, troojad, lunavara, kuidas need levivad ja kuidas end kaitsta.",
     topics: ["mis-on-pahavara", "kuidas-levib", "viirusetorjed"],
   },
   {
@@ -100,7 +100,7 @@ export const topics: Topic[] = [
       {
         title: "Miks see on oluline?",
         content:
-          "Igal aastal kannatavad miljonid inimesed identiteedivarguse, andmelekete ja finantspettuste tõttu. 2023. aastal registreeriti üle 2200 küberrünnaku päevas. Isegi tavakasutajad on sihtmärgid — automaatsed rünnakud ei vali ohvreid käsitsi. Üks nõrk parool või vale klikk võib viia pangakonto tühjendamiseni, isikuandmete lekkimiseni või seadme lukustamiseni lunavaraga.",
+          "Igal aastal kannatavad miljonid inimesed identiteedivarguse, andmelekete ja finantspettuste tõttu. 2023. aastal registreeriti üle 2200 küberrünnaku päevas. Isegi tavakasutajad on sihtmärgid, automaatsed rünnakud ei vali ohvreid käsitsi. Üks nõrk parool või vale klikk võib viia pangakonto tühjendamiseni, isikuandmete lekkimiseni või seadme lukustamiseni lunavaraga.",
       },
       {
         title: "Kolm sammast",
@@ -113,7 +113,7 @@ export const topics: Topic[] = [
     slug: "cia-triaad",
     category: "alused",
     title: "CIA triaad",
-    intro: "Konfidentsiaalsus, terviklikkus ja kättesaadavus — küberturvalisuse kolm tugisammast.",
+    intro: "Konfidentsiaalsus, terviklikkus ja kättesaadavus, küberturvalisuse kolm tugisammast.",
     readMinutes: 3,
     sections: [
       {
@@ -137,7 +137,7 @@ export const topics: Topic[] = [
     slug: "levinumad-ohud",
     category: "alused",
     title: "Levinumad ohud tänapäeval",
-    intro: "Tänapäeva küberohtude maastik — millega iga internetikasutaja igapäevaselt kokku puutub.",
+    intro: "Tänapäeva küberohtude maastik, millega iga internetikasutaja igapäevaselt kokku puutub.",
     readMinutes: 4,
     sections: [
       {
@@ -167,7 +167,7 @@ export const topics: Topic[] = [
       {
         title: "Miks uuendada kohe?",
         content:
-          "Tarkvarauuendused parandavad teadaolevaid turvanõrkusi. Ründajad kasutavad avalikustatud nõrkusi kiiresti ära — sageli päevade jooksul. WannaCry ransomware (2017) nakatas 230 000+ arvutit, kuigi parandus oli saadaval kuid enne rünnakut. Reegel: uuenda kohe, kui uuendus on saadaval.",
+          "Tarkvarauuendused parandavad teadaolevaid turvanõrkusi. Ründajad kasutavad avalikustatud nõrkusi kiiresti ära, sageli päevade jooksul. WannaCry ransomware (2017) nakatas 230 000+ arvutit, kuigi parandus oli saadaval kuid enne rünnakut. Reegel: uuenda kohe, kui uuendus on saadaval.",
       },
     ],
   },
@@ -183,7 +183,7 @@ export const topics: Topic[] = [
       {
         title: "Mis on tugev parool?",
         content:
-          'Hea parool on vähemalt 12 tähemärki pikk ja sisaldab suuri/väikseid tähti, numbreid ja erimärke. Ära kasuta isiklikku infot (sünnipäev, lemmiklooma nimi). Kasuta fraase: "kollanealune-traktor-19!Suvi" on tugev ja meeldejääv. Iga konto vajab unikaalset parooli — kui üks lekib, ei ole teised ohus.',
+          'Hea parool on vähemalt 12 tähemärki pikk ja sisaldab suuri/väikseid tähti, numbreid ja erimärke. Ära kasuta isiklikku infot (sünnipäev, lemmiklooma nimi). Kasuta fraase: "kollanealune-traktor-19!Suvi" on tugev ja meeldejääv. Iga konto vajab unikaalset parooli, kui üks lekib, ei ole teised ohus.',
       },
       {
         title: "Levinumad vead",
@@ -202,7 +202,7 @@ export const topics: Topic[] = [
     slug: "paroolihaldurid",
     category: "paroolid",
     title: "Paroolihaldurid",
-    intro: "Üks tugev peaparool, sajad unikaalsed paroolid — automaatselt.",
+    intro: "Üks tugev peaparool, sajad unikaalsed paroolid, automaatselt.",
     readMinutes: 3,
     sections: [
       {
@@ -213,9 +213,9 @@ export const topics: Topic[] = [
       {
         title: "Soovitatud valikud",
         list: [
-          "Bitwarden — avatud lähtekoodiga, tasuta versioon piisav",
-          "1Password — perekonna plaanid, mugav kasutajaliides",
-          "KeePassXC — täielikult lokaalne, ilma pilveteenuseta",
+          "Bitwarden, avatud lähtekoodiga, tasuta versioon piisav",
+          "1Password, perekonna plaanid, mugav kasutajaliides",
+          "KeePassXC, täielikult lokaalne, ilma pilveteenuseta",
         ],
         content: "Kõik need on auditeeritud ja krüpteerivad andmed enne pilve saatmist.",
       },
@@ -231,7 +231,7 @@ export const topics: Topic[] = [
       {
         title: "Räsifunktsioonid (hashing)",
         content:
-          "Korralikud teenused ei salvesta paroole selge tekstina — nad kasutavad räsifunktsioone. Parool → räsifunktsioon (bcrypt, Argon2) → räsi. Räsi on ühesuunaline — sellest ei saa parooli tagasi tuletada. Sool (salt) lisatakse unikaalsuse jaoks. Kui teenus saab sulle parooli meili teel saata, on see punane lipp — nad salvestavad seda selge tekstina.",
+          "Korralikud teenused ei salvesta paroole selge tekstina, nad kasutavad räsifunktsioone. Parool → räsifunktsioon (bcrypt, Argon2) → räsi. Räsi on ühesuunaline, sellest ei saa parooli tagasi tuletada. Sool (salt) lisatakse unikaalsuse jaoks. Kui teenus saab sulle parooli meili teel saata, on see punane lipp, nad salvestavad seda selge tekstina.",
       },
     ],
   },
@@ -261,9 +261,9 @@ export const topics: Topic[] = [
       {
         title: "Hoiatusmärgid",
         list: [
-          "Kiireloomulisus — \"sinu konto suletakse 24 tunni jooksul\"",
-          "Üldine tervitus — \"Lugupeetud klient\" õige nime asemel",
-          "Kahtlane saatja aadress — pank@paypa1.com (üks tähtnumber)",
+          "Kiireloomulisus, \"sinu konto suletakse 24 tunni jooksul\"",
+          "Üldine tervitus, \"Lugupeetud klient\" õige nime asemel",
+          "Kahtlane saatja aadress, pank@paypa1.com (üks tähtnumber)",
           "Õigekirjavead ja kohmakas eesti keel",
           "Lingid, mis viivad teisele domeenile kui paistab",
           "Manused, mida sa ei oodanud (.zip, .exe, .docm)",
@@ -341,7 +341,7 @@ export const topics: Topic[] = [
       {
         title: "Soovitused",
         content:
-          "Windowsi sisseehitatud Microsoft Defender on enamiku kasutajate jaoks piisav. Maci ja Linuxi puhul on viirusetõrje vähem kriitiline, aga Malwarebytes-i tüüpi tööriist on hea sekundaarne kontrollija. Tasuta tooted nagu Avast on minevikus kasutajate andmeid müünud — eelista ametlikku Defenderit või tasulist toodet.",
+          "Windowsi sisseehitatud Microsoft Defender on enamiku kasutajate jaoks piisav. Maci ja Linuxi puhul on viirusetõrje vähem kriitiline, aga Malwarebytes-i tüüpi tööriist on hea sekundaarne kontrollija. Tasuta tooted nagu Avast on minevikus kasutajate andmeid müünud, eelista ametlikku Defenderit või tasulist toodet.",
       },
     ],
   },
@@ -357,7 +357,7 @@ export const topics: Topic[] = [
       {
         title: "Kuidas töötab",
         content:
-          "Tulemüür on nagu turvatöötaja sinu võrgu sissepääsul — kontrollib, milline liiklus pääseb sisse ja välja. Riistvaraline tulemüür (ruuteris) kaitseb kogu võrku, tarkvaraline (Windowsi tulemüür) kaitseb üksikut seadet. Mõlemad on olulised ja peaksid olema alati sisse lülitatud.",
+          "Tulemüür on nagu turvatöötaja sinu võrgu sissepääsul, kontrollib, milline liiklus pääseb sisse ja välja. Riistvaraline tulemüür (ruuteris) kaitseb kogu võrku, tarkvaraline (Windowsi tulemüür) kaitseb üksikut seadet. Mõlemad on olulised ja peaksid olema alati sisse lülitatud.",
       },
     ],
   },
@@ -365,7 +365,7 @@ export const topics: Topic[] = [
     slug: "koduvork",
     category: "vorgud",
     title: "Koduvõrgu turvalisus",
-    intro: "Ruuter on kogu sinu kodu digitaalne väravavaht — kohtle teda vastavalt.",
+    intro: "Ruuter on kogu sinu kodu digitaalne väravavaht, kohtle teda vastavalt.",
     readMinutes: 4,
     sections: [
       {
@@ -427,7 +427,7 @@ export const topics: Topic[] = [
           "Geo-piiratud sisu vaatamiseks",
           "Kui ei taha, et internetiteenuse pakkuja näeks sinu sirvimisajalugu",
         ],
-        content: "Igapäevasel kodusel kasutamisel on VPN-i kasu piiratud — eelista HTTPS-i ja tugevaid paroole.",
+        content: "Igapäevasel kodusel kasutamisel on VPN-i kasu piiratud, eelista HTTPS-i ja tugevaid paroole.",
       },
     ],
   },
@@ -441,7 +441,7 @@ export const topics: Topic[] = [
       {
         title: "Levinud müüdid",
         content:
-          "VPN ei tee sind anonüümseks — VPN-teenuse pakkuja näeb sinu liiklust. VPN ei kaitse phishingu, pahavara ega nõrkade paroolide eest. VPN aeglustab ühendust veidi. Tasuta VPN võib müüa sinu andmeid. VPN ei asenda viirusetõrjet ega tervet mõistust.",
+          "VPN ei tee sind anonüümseks, VPN-teenuse pakkuja näeb sinu liiklust. VPN ei kaitse phishingu, pahavara ega nõrkade paroolide eest. VPN aeglustab ühendust veidi. Tasuta VPN võib müüa sinu andmeid. VPN ei asenda viirusetõrjet ega tervet mõistust.",
       },
       {
         title: "Kas VPN teeb anonüümseks?",
@@ -476,12 +476,12 @@ export const topics: Topic[] = [
       {
         title: "Kus seda kasutatakse",
         list: [
-          "HTTPS — kõik tundlikud veebilehed",
-          "Signal, WhatsApp — sõnumiside otsast otsani",
-          "BitLocker, FileVault — kõvaketta krüpteerimine",
-          "VPN — kogu internetiliikluse krüpteerimine",
+          "HTTPS, kõik tundlikud veebilehed",
+          "Signal, WhatsApp, sõnumiside otsast otsani",
+          "BitLocker, FileVault, kõvaketta krüpteerimine",
+          "VPN, kogu internetiliikluse krüpteerimine",
         ],
-        content: "Igapäevane internet ei töötaks ilma krüpteerimiseta — see on nähtamatu, kuid kõikjal.",
+        content: "Igapäevane internet ei töötaks ilma krüpteerimiseta, see on nähtamatu, kuid kõikjal.",
       },
     ],
   },
@@ -560,7 +560,7 @@ export const topics: Topic[] = [
       {
         title: "Hea tava",
         content:
-          "Piira avalikult jagatavat infot — sünnipäev, asukoht, reisiplaanid on kasulikud ründajatele. Kontrolli privaatsusseadeid regulaarselt. Ära aktsepteeri tundmatute inimeste sõbrakutseid. Kasuta tugevaid paroole ja 2FA-d. Ära jaga infot, mida saab kasutada turvaküsimuste vastamiseks.",
+          "Piira avalikult jagatavat infot, sünnipäev, asukoht, reisiplaanid on kasulikud ründajatele. Kontrolli privaatsusseadeid regulaarselt. Ära aktsepteeri tundmatute inimeste sõbrakutseid. Kasuta tugevaid paroole ja 2FA-d. Ära jaga infot, mida saab kasutada turvaküsimuste vastamiseks.",
       },
     ],
   },
@@ -574,10 +574,10 @@ export const topics: Topic[] = [
       {
         title: "Soovitatud tööriistad",
         list: [
-          "uBlock Origin — reklaamide ja jälgijate blokeerija",
-          "Privacy Badger — automaatne jälgijate tuvastamine",
+          "uBlock Origin, reklaamide ja jälgijate blokeerija",
+          "Privacy Badger, automaatne jälgijate tuvastamine",
           "Firefox koos Multi-Account Containers laiendiga",
-          "Brave brauser — jälgimisvastane vaikimisi",
+          "Brave brauser, jälgimisvastane vaikimisi",
         ],
         content: "Tasuta tööriistad, mis vähendavad oluliselt brauseri kaudu kogutavaid andmeid.",
       },
@@ -617,7 +617,7 @@ export const topics: Topic[] = [
       {
         title: "Tegelikkus",
         content:
-          "Enamik rünnakuid on automatiseeritud — robotid skaneerivad miljoneid IP-aadresse ja proovivad sadu paroole sekundis. Sa ei pea olema oluline sihtmärk, et sinu andmed väärtuslikuks osutuks. Pangakontod, e-posti kontod sotsiaalse manipulatsiooni jaoks, krüptoraha rahakotid — kõik on müüdav pimedas võrgus.",
+          "Enamik rünnakuid on automatiseeritud, robotid skaneerivad miljoneid IP-aadresse ja proovivad sadu paroole sekundis. Sa ei pea olema oluline sihtmärk, et sinu andmed väärtuslikuks osutuks. Pangakontod, e-posti kontod sotsiaalse manipulatsiooni jaoks, krüptoraha rahakotid, kõik on müüdav pimedas võrgus.",
       },
     ],
   },
@@ -665,7 +665,7 @@ export const faqs: { question: string; answer: string }[] = [
   {
     question: "Kuidas teada saada, kas mu andmed on lekkinud?",
     answer:
-      "Kontrolli oma e-posti aadressi haveibeenpwned.com lehel. See näitab, millistest andmelekketest sinu konto on tabandunud. Kui leiad lekke — vaheta kohe paroolid neis teenustes.",
+      "Kontrolli oma e-posti aadressi haveibeenpwned.com lehel. See näitab, millistest andmelekketest sinu konto on tabandunud. Kui leiad lekke, vaheta kohe paroolid neis teenustes.",
   },
   {
     question: "Mis on 2FA ja kas see on tüütu?",
@@ -757,7 +757,7 @@ export const tools: Tool[] = [
   },
   {
     name: "KeePassXC",
-    description: "Täielikult lokaalne paroolihaldur — andmed jäävad ainult sinu seadmesse.",
+    description: "Täielikult lokaalne paroolihaldur, andmed jäävad ainult sinu seadmesse.",
     url: "https://keepassxc.org",
     category: "paroolid",
     free: true,
@@ -780,7 +780,7 @@ export const tools: Tool[] = [
   },
   {
     name: "Firefox Monitor",
-    description: "Mozilla pakutav lekete jälgija — saab teate, kui su andmed lekivad uuesti.",
+    description: "Mozilla pakutav lekete jälgija, saab teate, kui su andmed lekivad uuesti.",
     url: "https://monitor.mozilla.org",
     category: "lekked",
     free: true,
@@ -816,7 +816,7 @@ export const tools: Tool[] = [
   },
   {
     name: "YubiKey",
-    description: "Füüsiline turvavõti — kõige tugevam 2FA-vorm tähtsate kontode jaoks.",
+    description: "Füüsiline turvavõti, kõige tugevam 2FA-vorm tähtsate kontode jaoks.",
     url: "https://yubico.com",
     category: "2fa",
   },
@@ -831,7 +831,7 @@ export const tools: Tool[] = [
   },
   {
     name: "Mullvad VPN",
-    description: "Privaatsusele keskendunud, ei nõua kontot — ainult juhuslik number.",
+    description: "Privaatsusele keskendunud, ei nõua kontot, ainult juhuslik number.",
     url: "https://mullvad.net",
     category: "vpn",
   },
@@ -859,7 +859,7 @@ export const tools: Tool[] = [
   },
   {
     name: "Microsoft Defender",
-    description: "Windowsisse sisseehitatud viirusetõrje — enamikule kasutajatest piisab.",
+    description: "Windowsisse sisseehitatud viirusetõrje, enamikule kasutajatest piisab.",
     url: "https://www.microsoft.com/en-us/windows/comprehensive-security",
     category: "viirus",
     free: true,
@@ -889,7 +889,7 @@ export const tools: Tool[] = [
   },
   {
     name: "uBlock Origin",
-    description: "Parim reklaamiblokeerija — väike, kiire ja avatud.",
+    description: "Parim reklaamiblokeerija, väike, kiire ja avatud.",
     url: "https://github.com/gorhill/uBlock",
     category: "brauser",
     free: true,
@@ -949,7 +949,7 @@ export const tools: Tool[] = [
   },
   {
     name: "Proton Drive",
-    description: "Krüpteeritud pilvekettaruum — failid loetavad ainult sulle.",
+    description: "Krüpteeritud pilvekettaruum, failid loetavad ainult sulle.",
     url: "https://proton.me/drive",
     category: "varundus",
     free: true,
@@ -957,7 +957,7 @@ export const tools: Tool[] = [
 
   // Ametlikud
   {
-    name: "RIA — Riigi Infosüsteemi Amet",
+    name: "RIA, Riigi Infosüsteemi Amet",
     description: "Eesti küberturvalisuse keskus. Teated, juhised ja intsidentide raporteerimine.",
     url: "https://ria.ee",
     category: "ametlik",
@@ -979,7 +979,7 @@ export const tools: Tool[] = [
   },
   {
     name: "CISA",
-    description: "USA küberturvalisuse amet — head juhendid ja hoiatused inglise keeles.",
+    description: "USA küberturvalisuse amet, head juhendid ja hoiatused inglise keeles.",
     url: "https://cisa.gov",
     category: "ametlik",
     free: true,

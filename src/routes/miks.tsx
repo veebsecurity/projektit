@@ -29,13 +29,13 @@ function WhyPage() {
           <p className="mt-6 text-lg leading-relaxed text-foreground/80">
             Enamik inimesi mõtleb küberturvalisusest siis, kui midagi on juba
             juhtunud. Siin on kokkuvõte sellest, miks tasub mõelda varem — ja
-            miks see ei puuduta ainult „tähtsaid" inimesi.
+            miks see ei puuduta ainult „tähtsaid” inimesi.
           </p>
         </div>
       </section>
 
       <article className="mx-auto max-w-3xl px-6 py-16 space-y-14">
-        <Section title="1. Sa oled sihtmärk, ka kui sa pole keegi „tähtis"">
+        <Section title={"1. Sa oled sihtmärk, ka kui sa pole keegi „tähtis”"}>
           <p>
             Filmides häkkerid valivad ohvri ja tegelevad temaga päevi. Päriselus
             töötab see vastupidi. Suurem osa rünnakuid on automaatsed: skriptid,
@@ -43,7 +43,7 @@ function WhyPage() {
             sama phishing-kirja sajandadele inimestele korraga.
           </p>
           <p>
-            See tähendab, et sind ei „valita". Sa langed lihtsalt sõela, kui sa
+            See tähendab, et sind ei „valita”. Sa langed lihtsalt sõela, kui sa
             pole minimaalseid ettevaatusabinõusid võtnud. Tugev ja unikaalne
             parool + 2FA viib sind kohe enamiku ohvrite hulgast välja.
           </p>
@@ -56,11 +56,11 @@ function WhyPage() {
           <ul className="mt-3 space-y-2 border-l-2 border-primary/40 pl-5">
             <li>
               E-posti konto annab juurdepääsu paljudele teistele teenustele
-              („unustasid parooli?" e-kiri tuleb sinna).
+              („unustasid parooli?” e-kiri tuleb sinna).
             </li>
             <li>
               Sotsiaalmeedia kontot kasutatakse pettusteks sinu sõprade vastu —
-              „hei, saadan sulle lingi, vaata kiiresti".
+              „hei, saadan sulle lingi, vaata kiiresti”.
             </li>
             <li>
               Mängude kontod (Steam, Riot, EA) sisaldavad sageli tegelikku
@@ -73,18 +73,18 @@ function WhyPage() {
           </ul>
         </Section>
 
-        <Section title="3. Privaatsus ei ole „varjamine"">
+        <Section title={"3. Privaatsus ei ole „varjamine”"}>
           <p>
             Levinud vastuväide on: „Mul pole midagi varjata, miks ma peaks
-            hoolima?" See lause aetakse segamini sõnaga „varjama", aga tegu on
+            hoolima?” See lause aetakse segamini sõnaga „varjama”, aga tegu on
             millegi muuga.
           </p>
           <p>
             Sa lukustad vannitoa ukse, paned kardinad ette, ei räägi oma
-            arsti­visiitidest võõrastele. Mitte sellepärast, et midagi
+            arstivisiitidest võõrastele. Mitte sellepärast, et midagi
             kahtlast oleks, vaid sellepärast, et see, mis on isiklik, on
-            isiklik. Privaatsus on vaikimisi seisund — see, et kogume tolmu
-            seda hoolimatusest ära andes, ei muuda asja loomulikuks.
+            isiklik. Privaatsus on vaikimisi seisund — see, et anname seda
+            hoolimatusest ära, ei muuda asja loomulikuks.
           </p>
           <p>
             Andmed, mida tasuta teenused sinust koguvad, kasutatakse hindade
@@ -112,12 +112,12 @@ function WhyPage() {
             On vahe selle vahel, kas sa annad kellelegi millegi vabatahtlikult
             ja kas see võetakse sult vaikselt. Enamik tasuta teenuseid
             töötab teise mudeli järgi — sa ei loe 40-leheküljelist
-            kasutustingimust ja sellepärast „nõustud" sellega, et su asukoht,
+            kasutustingimust ja sellepärast „nõustud” sellega, et su asukoht,
             kontaktid ja kõnetajad lähevad andmebaasidesse.
           </p>
           <p>
             Kaitsta ennast ei tähenda paranoiat. See tähendab teadlikku
-            otsust, et sa otsustad ise, mida jagada ja kellega. See on sama
+            otsust, et sa ise valid, mida jagada ja kellega. See on sama
             põhimõte nagu õigus oma keha üle, õigus arvamusele või õigus
             erapooletule kohtuotsusele.
           </p>

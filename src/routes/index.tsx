@@ -66,7 +66,7 @@ function Index() {
         <div className="mx-auto max-w-5xl px-6 py-20">
           <div className="max-w-2xl">
             <h2 className="font-display text-3xl font-semibold tracking-tight md:text-4xl">
-              {"„Mul pole midagi varjata" on müüt"}
+              {"„Mul pole midagi varjata” on müüt"}
             </h2>
             <p className="mt-5 text-base leading-relaxed text-foreground/80">
               See lause kõlab loogiliselt, aga vaatame seda lähemalt. Sa lukustad
@@ -79,7 +79,7 @@ function Index() {
 
           <div className="mt-12 grid gap-px overflow-hidden rounded-xl border border-border bg-border md:grid-cols-3">
             <ReasonCard
-              title="Sa oled sihtmärk, isegi kui sa pole keegi „tähtis""
+              title={"Sa oled sihtmärk, isegi kui sa pole keegi „tähtis”"}
               body="Suur osa rünnakutest on automaatsed. Robotid proovivad miljoneid kontosid päevas — kui sa kasutad sama parooli mitmes kohas, oled juba ohus. See pole isiklik, see on lihtsalt mass."
             />
             <ReasonCard

@@ -66,7 +66,7 @@ function Index() {
         <div className="mx-auto max-w-5xl px-6 py-20">
           <div className="max-w-2xl">
             <h2 className="font-display text-3xl font-semibold tracking-tight md:text-4xl">
-              „Mul pole midagi varjata" on müüt
+              {"„Mul pole midagi varjata" on müüt"}
             </h2>
             <p className="mt-5 text-base leading-relaxed text-foreground/80">
               See lause kõlab loogiliselt, aga vaatame seda lähemalt. Sa lukustad

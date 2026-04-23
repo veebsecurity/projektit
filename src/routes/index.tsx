@@ -39,13 +39,13 @@ function Index() {
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-3">
-            <Link
-              to="/miks"
+            <a
+              href="/miks"
               className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
             >
               Miks see oluline on
               <span aria-hidden>→</span>
-            </Link>
+            </a>
             <Link
               to="/teemad"
               className="inline-flex items-center gap-2 rounded-md border border-border-strong bg-surface px-5 py-3 text-sm font-medium text-foreground transition-colors hover:border-primary/50 hover:text-primary"
@@ -88,13 +88,13 @@ function Index() {
           </div>
 
           <div className="mt-8">
-            <Link
-              to="/miks"
+            <a
+              href="/miks"
               className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
             >
               Loe pikemalt, miks see kõik oluline on{" "}
               <span aria-hidden>→</span>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
